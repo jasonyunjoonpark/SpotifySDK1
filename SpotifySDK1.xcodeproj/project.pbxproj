@@ -8,8 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0AFD2669204CB08200CA490C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFD2668204CB08200CA490C /* AppDelegate.swift */; };
-		0AFD266B204CB08200CA490C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFD266A204CB08200CA490C /* ViewController.swift */; };
-		0AFD266E204CB08200CA490C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AFD266C204CB08200CA490C /* Main.storyboard */; };
+		0AFD266B204CB08200CA490C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFD266A204CB08200CA490C /* MainViewController.swift */; };
 		0AFD2670204CB08200CA490C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AFD266F204CB08200CA490C /* Assets.xcassets */; };
 		0AFD2673204CB08200CA490C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AFD2671204CB08200CA490C /* LaunchScreen.storyboard */; };
 		0AFD267E204CB1C700CA490C /* SpotifyMetadata.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AFD267B204CB1C700CA490C /* SpotifyMetadata.framework */; };
@@ -20,8 +19,7 @@
 /* Begin PBXFileReference section */
 		0AFD2665204CB08200CA490C /* SpotifySDK1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpotifySDK1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AFD2668204CB08200CA490C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0AFD266A204CB08200CA490C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		0AFD266D204CB08200CA490C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0AFD266A204CB08200CA490C /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		0AFD266F204CB08200CA490C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0AFD2672204CB08200CA490C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0AFD2674204CB08200CA490C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -66,8 +64,7 @@
 			children = (
 				0AFD2691204CB6D200CA490C /* SpotifySDK1-Bridging-Header.h */,
 				0AFD2668204CB08200CA490C /* AppDelegate.swift */,
-				0AFD266A204CB08200CA490C /* ViewController.swift */,
-				0AFD266C204CB08200CA490C /* Main.storyboard */,
+				0AFD266A204CB08200CA490C /* MainViewController.swift */,
 				0AFD266F204CB08200CA490C /* Assets.xcassets */,
 				0AFD2671204CB08200CA490C /* LaunchScreen.storyboard */,
 				0AFD2674204CB08200CA490C /* Info.plist */,
@@ -148,7 +145,6 @@
 			files = (
 				0AFD2673204CB08200CA490C /* LaunchScreen.storyboard in Resources */,
 				0AFD2670204CB08200CA490C /* Assets.xcassets in Resources */,
-				0AFD266E204CB08200CA490C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,7 +155,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0AFD266B204CB08200CA490C /* ViewController.swift in Sources */,
+				0AFD266B204CB08200CA490C /* MainViewController.swift in Sources */,
 				0AFD2669204CB08200CA490C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -167,14 +163,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		0AFD266C204CB08200CA490C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0AFD266D204CB08200CA490C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		0AFD2671204CB08200CA490C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
