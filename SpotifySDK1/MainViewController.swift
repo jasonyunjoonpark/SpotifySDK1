@@ -51,7 +51,7 @@ class MainViewController: UIViewController {
         setupSpotifyLoginButtonConstraints()
         
         setup()
-        NotificationCenter.default.addObserver(self, selector: #selector(MainViewController.updateAfterFirstLogin))
+        NotificationCenter.default.addObserver(self, selector: #selector(updateAfterFirstLogin), name: Notification.Name(rawValue: "loginSuccessful"), object: nil)
     }
 
     fileprivate func setup() {
@@ -89,7 +89,7 @@ class MainViewController: UIViewController {
     }
     
     @objc func updateAfterFirstLogin () {
-        if let sessionObj: AnyObject = userDefaults.object(forKey: "SpotifySession") as AnyObject? {
+        if let sessionObj: AnyObject = UserDefaults.standard.object(forKey: "SpotifySession") as AnyObject? {
             let sessionDataObj = sessionObj as! Data
             let firstTimeSession = NSKeyedUnarchiver.unarchiveObject(with: sessionDataObj) as! SPTSession
             self.session = firstTimeSession
