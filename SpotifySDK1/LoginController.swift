@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainViewController: UIViewController, SPTAudioStreamingPlaybackDelegate, SPTAudioStreamingDelegate {
+class LoginController: UIViewController, SPTAudioStreamingPlaybackDelegate, SPTAudioStreamingDelegate {
     
     var auth = SPTAuth.defaultInstance()!
     var session: SPTSession!
@@ -51,7 +51,7 @@ class MainViewController: UIViewController, SPTAudioStreamingPlaybackDelegate, S
         setupSpotifyLoginButtonConstraints()
 
         setup()
-        NotificationCenter.default.addObserver(self, selector: #selector(MainViewController.updateAfterFirstLogin), name: Notification.Name(rawValue: "loginSuccessful"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(updateAfterFirstLogin), name: Notification.Name(rawValue: "loginSuccessful"), object: nil)
     }
 
     fileprivate func setup() {
@@ -83,7 +83,7 @@ class MainViewController: UIViewController, SPTAudioStreamingPlaybackDelegate, S
     @objc func handleLoginToSpotify() {
         if UIApplication.shared.openURL(loginUrl!) {
             if auth.canHandle(auth.redirectURL) {
-                // To do - build in error handling
+                
             }
         }
     }
