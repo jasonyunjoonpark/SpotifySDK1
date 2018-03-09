@@ -56,7 +56,7 @@ class LoginController: UIViewController, SPTAudioStreamingPlaybackDelegate, SPTA
 
     fileprivate func setup() {
         SPTAuth.defaultInstance().clientID = "e8c7d4ec24ba4fe69a1bded75f95c6ba"
-        SPTAuth.defaultInstance().redirectURL = URL(string: "SpotifySDK1://returnAfterLogin")
+        SPTAuth.defaultInstance().redirectURL = URL(string: "spotifysdk1://returnafterlogin")
         SPTAuth.defaultInstance().requestedScopes = [SPTAuthStreamingScope, SPTAuthPlaylistReadPrivateScope, SPTAuthPlaylistModifyPublicScope, SPTAuthPlaylistModifyPrivateScope]
         loginUrl = SPTAuth.defaultInstance().spotifyWebAuthenticationURL()
         

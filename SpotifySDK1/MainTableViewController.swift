@@ -8,14 +8,19 @@
 
 import UIKit
 
-class TableViewController: UITableViewController {
+class MainTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        checkIfUserIsLoggedIntoSpotify()
+        
         
     }
 
+    func checkIfUserIsLoggedIntoSpotify() {
+        
+    }
 
 
 }

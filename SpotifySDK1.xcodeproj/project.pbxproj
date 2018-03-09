@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A4DC05620520F7C0033CA0A /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4DC05520520F7C0033CA0A /* TableViewController.swift */; };
+		0A4DC05620520F7C0033CA0A /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4DC05520520F7C0033CA0A /* MainTableViewController.swift */; };
 		0AFD2669204CB08200CA490C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFD2668204CB08200CA490C /* AppDelegate.swift */; };
 		0AFD266B204CB08200CA490C /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFD266A204CB08200CA490C /* LoginController.swift */; };
 		0AFD2670204CB08200CA490C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AFD266F204CB08200CA490C /* Assets.xcassets */; };
@@ -19,7 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0A4DC05520520F7C0033CA0A /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		0A4DC05520520F7C0033CA0A /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		0AFD2665204CB08200CA490C /* SpotifySDK1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpotifySDK1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AFD2668204CB08200CA490C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0AFD266A204CB08200CA490C /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
@@ -74,7 +74,7 @@
 				0AFD2691204CB6D200CA490C /* SpotifySDK1-Bridging-Header.h */,
 				0AFD2668204CB08200CA490C /* AppDelegate.swift */,
 				0AFD266A204CB08200CA490C /* LoginController.swift */,
-				0A4DC05520520F7C0033CA0A /* TableViewController.swift */,
+				0A4DC05520520F7C0033CA0A /* MainTableViewController.swift */,
 				0AFD266F204CB08200CA490C /* Assets.xcassets */,
 				0AFD2671204CB08200CA490C /* LaunchScreen.storyboard */,
 				0AFD2674204CB08200CA490C /* Info.plist */,
@@ -239,7 +239,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A4DC05620520F7C0033CA0A /* TableViewController.swift in Sources */,
+				0A4DC05620520F7C0033CA0A /* MainTableViewController.swift in Sources */,
 				0AFD266B204CB08200CA490C /* LoginController.swift in Sources */,
 				0AFD2669204CB08200CA490C /* AppDelegate.swift in Sources */,
 			);
