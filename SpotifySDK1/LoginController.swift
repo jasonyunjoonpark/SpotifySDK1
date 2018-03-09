@@ -67,8 +67,9 @@ class LoginController: UIViewController, SPTAudioStreamingPlaybackDelegate, SPTA
         print("logged in")
         self.player?.playSpotifyURI("spotify:track:1X4quk4JcIgpCLyvKQupOu", startingWith: 0, startingWithPosition: 0, callback: { (error) in
             if (error != nil) {
-                print("playing!")
+                print(error)
             }
+            print("playing!")
         })
     }
     
