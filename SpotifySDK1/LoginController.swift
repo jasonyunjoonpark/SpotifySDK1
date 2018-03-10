@@ -7,13 +7,14 @@
 //
 
 import UIKit
+import SafariServices
 
 class LoginController: UIViewController, SPTAudioStreamingPlaybackDelegate, SPTAudioStreamingDelegate {
     
     var auth = SPTAuth.defaultInstance()!
     var session: SPTSession!
     var player: SPTAudioStreamingController?
-    var loginUrl: URL?
+
     
     
     
@@ -56,9 +57,9 @@ class LoginController: UIViewController, SPTAudioStreamingPlaybackDelegate, SPTA
 
     fileprivate func setup() {
         SPTAuth.defaultInstance().clientID = "e8c7d4ec24ba4fe69a1bded75f95c6ba"
-        SPTAuth.defaultInstance().redirectURL = URL(string: "SpotifySDK1://returnAfterLogin")
+        SPTAuth.defaultInstance().redirectURL = URL(string: "spotifysdk1://returnafterlogin")
         SPTAuth.defaultInstance().requestedScopes = [SPTAuthStreamingScope, SPTAuthPlaylistReadPrivateScope, SPTAuthPlaylistModifyPublicScope, SPTAuthPlaylistModifyPrivateScope]
-        loginUrl = SPTAuth.defaultInstance().spotifyWebAuthenticationURL()
+
         
     }
     
@@ -82,10 +83,16 @@ class LoginController: UIViewController, SPTAudioStreamingPlaybackDelegate, SPTA
     
     //--------Handle Login--------------------------//
     @objc func handleLoginToSpotify() {
-        if UIApplication.shared.openURL(loginUrl!) {
-            if auth.canHandle(auth.redirectURL) {
-                
-            }
+        let appURL = SPTAuth.defaultInstance().spotifyAppAuthenticationURL()!
+        let webURL = SPTAuth.defaultInstance().spotifyWebAuthenticationURL()!
+        
+        //Check to see if the user has Spotify installed
+        if SPTAuth.supportsApplicationAuthentication() {
+            //Open the Spotify app by opening its url
+            UIApplication.shared.open(appURL, options: [:], completionHandler: nil)
+        } else {
+            //Present a web browser in the app that lets the user sign in to Spotify
+            present(SFSafariViewController(url: webURL), animated: true, completion: nil)
         }
     }
     

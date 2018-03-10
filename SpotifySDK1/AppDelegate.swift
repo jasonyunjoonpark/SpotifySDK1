@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         window?.rootViewController = LoginController()
         
-        auth.redirectURL = URL(string: "SpotifySDK1://returnAfterLogin")
+        auth.redirectURL = URL(string: "spotifysdk1://returnafterlogin")
         auth.sessionUserDefaultsKey = "current session"
         
         return true
